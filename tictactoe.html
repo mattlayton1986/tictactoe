@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TicTacToe Game</title>
+  <link type="text/css" rel="stylesheet" href="tictactoe.css" />
+  <script type="text/javascript" src="jquery_3.1.1.js"></script>
+  <script type="text/javascript" src="tictactoe.js"></script>
+</head>
+<body>
+  <!-- Contains Gameplay Screen-->
+  <div id="game" class="container">
+    <div id="top-row">
+      <div id="0" class="box"></div>
+      <div id="1" class="box"></div>
+      <div id="2" class="box"></div>
+    </div>
+    <br />
+    <div id="middle-row">
+      <div id="3" class="box"></div>
+      <div id="4" class="box"></div>
+      <div id="5" class="box"></div>
+    </div>
+    <br />
+    <div id="bottom-row">
+      <div id="6" class="box"></div>
+      <div id="7" class="box"></div>
+      <div id="8" class="box"></div>
+    </div>
+  </div>
+
+  <!-- Contains Controls -->
+  <div id="panel" class="container">
+      <div id="user">
+        <p>You <span></span>:</p>
+      </div>
+      <div id="computer">
+        <p>Computer <span></span>:</p>
+      </div>
+      <hr />
+      <div id="score">
+        <p>Total Games Won <span></span>:</p>
+        <button>Reset Score</button>
+      </div>
+      <div id="buttons">
+        <button>Start Next Game</button><br />
+        <button>Reset This Game</button><br />
+      </div>
+  </div>
+</body>
+</html>

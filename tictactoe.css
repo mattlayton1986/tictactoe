@@ -1,0 +1,40 @@
+.container {
+  background-color: rgb(200, 200, 200);
+  border-radius: 5px;
+  height: 330px;
+  padding: 15px;
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+}
+
+div[id$="row"] {
+  clear: both;
+}
+
+div[id$="row"] > div {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(19,237,121);
+  border-radius: 5px;
+  font-size: 60px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  line-height: 100px;
+  float: left;
+  margin: 5px;
+  cursor: pointer;
+}
+#panel {
+  position: relative;
+  min-width: 200px;
+}
+button {
+  min-width: 200px;
+  margin: auto;
+}
+
+#buttons {
+  position: relative;
+  top: 105px;
+}
