@@ -2,6 +2,35 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+/* SCORES AND CONTROL PANEL */
+
+#panel {
+  position: relative;
+  min-width: 200px;
+}
+
+h1 {
+  font-size: 26px;
+  text-align: center;
+  margin: 0;
+}
+
+span {
+  text-transform: uppercase;
+}
+
+button {
+  min-width: 200px;
+  cursor: pointer;
+}
+
+#buttons {
+  position: relative;
+  top: 60px;
+}
+
+/* GAME BOARD*/
+
 .container {
   background-color: rgb(200, 200, 200);
   border-radius: 5px;
@@ -28,23 +57,9 @@ div[id$="row"] > div {
   margin: 5px;
   cursor: pointer;
 }
-#panel {
-  position: relative;
-  min-width: 200px;
-}
 
-h1 {
-  font-size: 26px;
-  text-align: center;
-  margin: 0;
-}
+/* JS-RENDERED CLASSES */
 
-button {
-  min-width: 200px;
-  cursor: pointer;
-}
-
-#buttons {
-  position: relative;
-  top: 60px;
+.taken {
+  background-color: rgb(242,94,126);
 }
