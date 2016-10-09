@@ -12,9 +12,9 @@ $(document).ready(function() {
   // Give player choice of X or O and set as 'userMarker'
   var userMarker;
   debugger;
-  do {
-    userMarker = prompt("X or O?");
-  } while ((userMarker != "X") && (userMarker != "O"));
+  //do {
+  //  userMarker = prompt("X or O?");
+  //} while ((userMarker != "X") && (userMarker != "O"));
 
   // Set 'computerMarker' to whichever user didn't pick
   var computerMarker = (userMarker === "X") ? "O" : "X";
