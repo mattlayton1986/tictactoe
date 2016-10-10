@@ -60,6 +60,10 @@ div[id$="row"] > div {
 
 /* JS-RENDERED CLASSES */
 
+.turn {
+  font-weight: bold;
+  color: rgb(57, 93, 221);
+}
 .taken {
   background-color: rgb(242,94,126);
 }
