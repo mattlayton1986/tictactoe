@@ -9,6 +9,7 @@ var game = {
 
   // Game functions
   initializeGame: function() {
+    $('.box').addClass('available');
     user.chooseMarker();
     computer.chooseMarker();
     user.setMarkerInUI();
@@ -21,9 +22,15 @@ var game = {
     ++this.turnCount;
     if ((this.turnCount % 2) !== 0) {
       user.setTurn(true);
+      if ($('#computer p').hasClass('turn')) {
+        $('#computer p').removeClass('turn');
+      }
       $('#user p').addClass('turn');
     } else {
       computer.setTurn(true);
+      if ($('#user p').hasClass('turn')) {
+        $('#user p').removeClass('turn');
+      }
       $('#computer p').addClass('turn');
     }
   }
@@ -52,16 +59,23 @@ var user = {
     $('#user span').text("(" + this.marker + ")");
   },
   getTurn: function() {
-    return turn;
+    return this.turn;
   },
   setTurn: function(toggle) {
     this.turn = toggle;
   },
   updateScore: function() {
-    if (game.turn > 0) {
-      this.score += 1;
+    if (game.turnCount > 0) {
+      this.score = this.score + 1;
     }
     $('#user strong').text(this.score);
+  },
+  userClick: function() {
+    $('.box').click(function() {
+      $(this).text(user.marker);
+      $(this).addClass('taken');
+      user.updateScore();
+    });
   }
 };
 
@@ -81,7 +95,7 @@ var computer = {
     this.marker = (user.marker === "x") ? "o" : "x";
   },
   setMarkerInUI: function() {
-    $('#computer span').text("(" + this.marker + ")")
+    $('#computer span').text("(" + this.marker + ")");
   },
   getTurn: function() {
     return this.turn;
@@ -102,5 +116,7 @@ var computer = {
 $(document).ready(function() {
   // GAME INITIALIZATION
   game.initializeGame();
+  // while (true) {
   game.changeTurn();
+  user.userClick();
 });
